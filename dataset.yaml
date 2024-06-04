@@ -1,0 +1,16 @@
+info:
+  year: 2024
+  version: '1.0'
+  description: ''
+  contributor: Label Studio
+  url: ''
+  date_created: '2024-06-03 19:06:37.348646'
+categories:
+- id: 0
+  name: keyboard
+- id: 1
+  name: mouse
+- id: 2
+  name: phone
+- id: 3
+  name: screen
