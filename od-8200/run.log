@@ -1,0 +1,56 @@
+
+INFO:20240604-034342: running - od-8200
+INFO:20240604-034342: pipeline_config - {'task_type': 'detection', 'dataset_category': 'coco', 'calibration_dataset': <edgeai_benchmark.datasets.modelmaker_datasets.ModelMakerDetectionDataset object at 0x7fb2fc4d7730>, 'input_dataset': <edgeai_benchmark.datasets.modelmaker_datasets.ModelMakerDetectionDataset object at 0x7fb1fed43c70>, 'preprocess': <edgeai_benchmark.preprocess.PreProcessTransforms object at 0x7fb1fed0f430>, 'session': <edgeai_benchmark.sessions.onnxrt_session.ONNXRTSession object at 0x7fb1fed0f490>, 'postprocess': <edgeai_benchmark.postprocess.PostProcessTransforms object at 0x7fb1fed0f760>, 'metric': {'label_offset_pred': 0}, 'model_info': {'metric_reference': {'accuracy_ap[.5:.95]%': None}, 'model_shortlist': 10}}
+INFO:20240604-034342: import  - od-8200 - this may take some time...Traceback (most recent call last):
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/pipeline_runner.py", line 174, in _run_pipeline
+    result = cls._run_pipeline_impl(basic_settings, pipeline_config, description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/pipeline_runner.py", line 147, in _run_pipeline_impl
+    accuracy_result = accuracy_pipeline(description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 122, in __call__
+    param_result = self._run(description=description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 146, in _run
+    self._import_model(description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 203, in _import_model
+    self._run_with_log(session.import_model, calib_data)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 315, in _run_with_log
+    return func(*args, **kwargs)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/sessions/onnxrt_session.py", line 52, in import_model
+    self.interpreter = self._create_interpreter(is_import=True)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/sessions/onnxrt_session.py", line 132, in _create_interpreter
+    interpreter = onnxruntime.InferenceSession(self.kwargs['model_file'], providers=ep_list,
+  File "/home/tiovo/.pyenv/versions/3.10.11/lib/python3.10/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 283, in __init__
+    self._create_inference_session(providers, provider_options)
+  File "/home/tiovo/.pyenv/versions/3.10.11/lib/python3.10/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 310, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from /home/tiovo/edgeai-modelmaker/data/projects/project-2-at-2024-06-03-19-06-a103c2bc.zip/run/20240604-032110/yolox_nano_lite/compilation/TDA4VM/work/od-8200/model/model.onnx failed:/home/a0496663/work/edgeaitidltools/rel90/onnx/onnxruntime_bit/onnxruntime/onnxruntime/core/graph/model.cc:111 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&) Unknown model file format version.
+
+[ONNXRuntimeError] : 1 : FAIL : Load model from /home/tiovo/edgeai-modelmaker/data/projects/project-2-at-2024-06-03-19-06-a103c2bc.zip/run/20240604-032110/yolox_nano_lite/compilation/TDA4VM/work/od-8200/model/model.onnx failed:/home/a0496663/work/edgeaitidltools/rel90/onnx/onnxruntime_bit/onnxruntime/onnxruntime/core/graph/model.cc:111 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&) Unknown model file format version.
+
+
+INFO:20240604-034343: running - od-8200
+INFO:20240604-034343: pipeline_config - {'task_type': 'detection', 'dataset_category': 'coco', 'calibration_dataset': <edgeai_benchmark.datasets.modelmaker_datasets.ModelMakerDetectionDataset object at 0x7fb2fc4d7730>, 'input_dataset': <edgeai_benchmark.datasets.modelmaker_datasets.ModelMakerDetectionDataset object at 0x7fb1fed43c70>, 'preprocess': <edgeai_benchmark.preprocess.PreProcessTransforms object at 0x7fb1fed0f430>, 'session': <edgeai_benchmark.sessions.onnxrt_session.ONNXRTSession object at 0x7fb1fed0f490>, 'postprocess': <edgeai_benchmark.postprocess.PostProcessTransforms object at 0x7fb1fed0f760>, 'metric': {'label_offset_pred': 0}, 'model_info': {'metric_reference': {'accuracy_ap[.5:.95]%': None}, 'model_shortlist': 10}}
+INFO:20240604-034343: import  - od-8200 - this may take some time...Traceback (most recent call last):
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/pipeline_runner.py", line 174, in _run_pipeline
+    result = cls._run_pipeline_impl(basic_settings, pipeline_config, description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/pipeline_runner.py", line 147, in _run_pipeline_impl
+    accuracy_result = accuracy_pipeline(description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 122, in __call__
+    param_result = self._run(description=description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 146, in _run
+    self._import_model(description)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 203, in _import_model
+    self._run_with_log(session.import_model, calib_data)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/pipelines/accuracy_pipeline.py", line 315, in _run_with_log
+    return func(*args, **kwargs)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/sessions/onnxrt_session.py", line 52, in import_model
+    self.interpreter = self._create_interpreter(is_import=True)
+  File "/home/tiovo/edgeai-benchmark/edgeai_benchmark/sessions/onnxrt_session.py", line 132, in _create_interpreter
+    interpreter = onnxruntime.InferenceSession(self.kwargs['model_file'], providers=ep_list,
+  File "/home/tiovo/.pyenv/versions/3.10.11/lib/python3.10/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 283, in __init__
+    self._create_inference_session(providers, provider_options)
+  File "/home/tiovo/.pyenv/versions/3.10.11/lib/python3.10/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 310, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Load model from /home/tiovo/edgeai-modelmaker/data/projects/project-2-at-2024-06-03-19-06-a103c2bc.zip/run/20240604-032110/yolox_nano_lite/compilation/TDA4VM/work/od-8200/model/model.onnx failed:/home/a0496663/work/edgeaitidltools/rel90/onnx/onnxruntime_bit/onnxruntime/onnxruntime/core/graph/model.cc:111 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&) Unknown model file format version.
+
+[ONNXRuntimeError] : 1 : FAIL : Load model from /home/tiovo/edgeai-modelmaker/data/projects/project-2-at-2024-06-03-19-06-a103c2bc.zip/run/20240604-032110/yolox_nano_lite/compilation/TDA4VM/work/od-8200/model/model.onnx failed:/home/a0496663/work/edgeaitidltools/rel90/onnx/onnxruntime_bit/onnxruntime/onnxruntime/core/graph/model.cc:111 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&) Unknown model file format version.
+
